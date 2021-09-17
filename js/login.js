@@ -47,7 +47,7 @@ function onSignIn(googleUser) {
 function googleKey() {
     alert("El siguiente msj va a solicitar la key")
     let key = prompt("Google Key hint: 9-k");
-    document.cookie = "username=Test; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+    document.cookie = "username=Test; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/";
     return key;
 }
 
