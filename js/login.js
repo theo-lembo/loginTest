@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     let yes = 0;
     let icon = `<link rel="icon" type="image/png" href="img/faviconD.png" />`;
     yes = prompt("Ingrese 1 para Ingresar con Google")
-    if (yes === 1) {
+    if (yes === "1") {
         document.head.innerHTML += `
         <meta name="google-signin-client_id" content="` + googleKey() + `.apps.googleusercontent.com">
         <meta name="google-signin-scope" content="profile email">`
