@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content=".apps.googleusercontent.com">
+    <!--Por temas de seguridad en pages aún no funciona el login con google.-->
+    <meta name="google-signin-scope" content="profile email">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div id="error"></div>
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="./img/login.png" id="icon" alt="User Icon" />
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" method="GET">
+                <input type="text" id="user" class="fadeIn second" placeholder="usuario">
+                <input type="password" id="password" class="fadeIn third" placeholder="contraseña">
+                <input type="submit" class="fadeIn fourth" value="Acceder">
+            </form>
+
+            <button class="g-signin2" onclick="google()" data-onsuccess="onSignIn">Acceder</button>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
