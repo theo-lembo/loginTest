@@ -55,13 +55,15 @@ function googleKey() {
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e) {
-    document.head.innerHTML += `
-    
-    <meta name="google-signin-client_id" content="` + googleKey() + `.apps.googleusercontent.com">
-    <meta name="google-signin-scope" content="profile email">`
-
+    let yes = 0;
     let icon = `<link rel="icon" type="image/png" href="img/faviconD.png" />`;
-    document.head.innerHTML += icon;
+    yes = prompt("Ingrese 1 para Ingresar con Google")
+    if (yes === 1) {
+        document.head.innerHTML += `
+        <meta name="google-signin-client_id" content="` + googleKey() + `.apps.googleusercontent.com">
+        <meta name="google-signin-scope" content="profile email">`
+        document.head.innerHTML += icon;
+    }
 
 });
 
